@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wassim Ben Younes — Portfolio</title>
+  <meta name="description" content="Portfolio — Infrastructure informatique & cybersécurité (Windows Server, Linux, réseaux, sécurité, supervision, Python)." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <div class="avatar" aria-hidden="true">WB</div>
+        <div>
+          <h1>Wassim Ben Younes</h1>
+          <p class="subtitle">Étudiant — Infrastructure informatique & cybersécurité (AEC)</p>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#formation">Formation</a>
+        <a href="#contact" class="btn">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container grid-2">
+        <div>
+          <h2>Administration systèmes, réseaux et sécurité — orienté lab entreprise</h2>
+          <p class="lead">
+            Je construis et sécurise des environnements Windows/Linux : Active Directory, DNS/DHCP, pare-feu,
+            VPN, supervision et journalisation. Je développe aussi des outils Python (PyQt5/Flask) pour automatiser
+            et centraliser des tâches d’administration.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn" href="#projets">Voir mes projets</a>
+            <a class="btn-outline" href="#contact">Me contacter</a>
+          </div>
+
+          <ul class="quick-facts">
+            <li><strong>Disponibilité :</strong> stage temps plein (35h/sem.)</li>
+            <li><strong>Localisation :</strong> Québec (Montréal)</li>
+            <li><strong>Domaines :</strong> SysAdmin • Réseaux • Sécurité • Supervision</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Compétences clés</h3>
+          <div class="chips">
+            <span>Windows Server 2022</span>
+            <span>Active Directory</span>
+            <span>DNS / DHCP</span>
+            <span>Linux (Debian)</span>
+            <span>nftables / iptables</span>
+            <span>VPN (IPsec)</span>
+            <span>Zabbix</span>
+            <span>Stork / Kea</span>
+            <span>Python (PyQt5/Flask)</span>
+            <span>PostgreSQL / MySQL</span>
+          </div>
+
+          <div class="divider"></div>
+
+          <h3>Liens</h3>
+          <ul class="links">
+            <li><a href="#" target="_blank" rel="noreferrer">LinkedIn (à ajouter)</a></li>
+            <li><a href="#" target="_blank" rel="noreferrer">GitHub (à ajouter)</a></li>
+            <li><a href="#" target="_blank" rel="noreferrer">CV (PDF) (à ajouter)</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="competences" class="section">
+      <div class="container">
+        <h2>Compétences</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>Systèmes</h3>
+            <ul>
+              <li>Windows Server : AD DS, GPO, DNS, DHCP, WSUS</li>
+              <li>Linux : déploiement, durcissement, services réseau</li>
+              <li>Gestion des services : systemd, journaux (journald)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Réseaux</h3>
+            <ul>
+              <li>VLAN, routage, NAT/PAT, ACL</li>
+              <li>Diagnostic : ping/traceroute, ss/netstat, tcpdump/wireshark</li>
+              <li>Lab & virtualisation : VirtualBox/VMware, GNS3, pfSense</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Sécurité & supervision</h3>
+            <ul>
+              <li>Pare-feu : nftables/iptables, Fail2Ban</li>
+              <li>Supervision : Zabbix (agents, triggers, dashboards)</li>
+              <li>Outils : Stork, Kea DHCP, BIND9</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projets" class="section alt">
+      <div class="container">
+        <h2>Projets</h2>
+        <p class="muted">
+          Une sélection de projets académiques et personnels. Chaque projet est orienté “réel” :
+          objectifs, technos, résultats, preuves (captures/commandes) si besoin.
+        </p>
+
+        <div class="grid-2">
+          <article class="card project">
+            <div class="project-head">
+              <h3>Mini SOC — Supervision pare-feu & serveurs (Zabbix)</h3>
+              <span class="tag">Supervision</span>
+            </div>
+            <p>
+              Mise en place d’un environnement de supervision : collecte métriques, triggers, alertes,
+              supervision services, analyse journaux système.
+            </p>
+            <ul class="project-list">
+              <li>Création d’items (system.run), triggers et actions</li>
+              <li>Surveillance firewall, disponibilité services, latence réseau</li>
+              <li>Tableaux de bord et preuves (logs/captures)</li>
+            </ul>
+            <div class="project-tech">
+              <span>Zabbix</span><span>Linux</span><span>Logs</span><span>Firewall</span>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project-head">
+              <h3>Debian 12 durci — services & sécurité</h3>
+              <span class="tag">Durcissement</span>
+            </div>
+            <p>
+              Déploiement et sécurisation d’un serveur Debian minimal : SSH, pare-feu, services réseau, journaux, audit.
+            </p>
+            <ul class="project-list">
+              <li>SSH sécurisé, règles nftables, Fail2Ban</li>
+              <li>Services : DNS/DHCP (BIND9 / Kea) et supervision Stork</li>
+              <li>Procédures reproductibles (cahier d’installation)</li>
+            </ul>
+            <div class="project-tech">
+              <span>Debian</span><span>nftables</span><span>Fail2Ban</span><span>BIND9</span><span>Kea</span><span>Stork</span>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project-head">
+              <h3>Infrastructure Windows — AD, DNS, DHCP, GPO</h3>
+              <span class="tag">Windows Server</span>
+            </div>
+            <p>
+              Conception d’une infra type entreprise : domaine, OUs, comptes, politiques, et services réseau.
+            </p>
+            <ul class="project-list">
+              <li>AD DS : OU, groupes, RBAC, politiques mots de passe</li>
+              <li>DNS/DHCP : étendues, réservations, options</li>
+              <li>GPO : durcissement, paramètres utilisateurs/ordinateurs</li>
+            </ul>
+            <div class="project-tech">
+              <span>Windows Server 2022</span><span>AD DS</span><span>DNS</span><span>DHCP</span><span>GPO</span>
+            </div>
+          </article>
+
+          <article class="card project">
+            <div class="project-head">
+              <h3>SecureAdmin — Application Python (gestion & logs)</h3>
+              <span class="tag">Développement</span>
+            </div>
+            <p>
+              Application desktop pour centraliser la gestion des utilisateurs, rôles et journalisation, avec base de données.
+            </p>
+            <ul class="project-list">
+              <li>Authentification, hachage mots de passe, RBAC</li>
+              <li>Gestion utilisateurs, historiques, exports</li>
+              <li>Base PostgreSQL (et version SQLite)</li>
+            </ul>
+            <div class="project-tech">
+              <span>Python</span><span>PyQt5</span><span>PostgreSQL</span><span>RBAC</span><span>Logs</span>
+            </div>
+          </article>
+        </div>
+
+        <p class="note">
+          Conseil : ajoute 2–3 preuves par projet (capture d’écran, extrait de config, schéma réseau) dans un dépôt GitHub par projet.
+        </p>
+      </div>
+    </section>
+
+    <section id="formation" class="section">
+      <div class="container">
+        <h2>Formation</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>AEC — Infrastructure informatique & cybersécurité</h3>
+            <p class="muted">Collège de Bois-de-Boulogne — Québec</p>
+            <ul>
+              <li>Réseaux (VLAN, NAT, ACL, OSPF, VPN)</li>
+              <li>Administration Windows & Linux</li>
+              <li>Durcissement, supervision, documentation</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Objectif de stage</h3>
+            <ul>
+              <li>Exploitation / administration (N1/N2)</li>
+              <li>Sécurité opérationnelle (SOC junior) / supervision</li>
+              <li>Automatisation (scripts, monitoring, hardening)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <div class="card">
+          <p>
+            Pour me joindre, écris-moi à :
+            <a href="mailto:ton.email@example.com">ton.email@example.com</a>
+          </p>
+          <p class="muted">
+            Ajoute ici ton LinkedIn et ton GitHub dès que tu les as (ou remplace les liens en haut).
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Wassim Ben Younes — Portfolio</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
