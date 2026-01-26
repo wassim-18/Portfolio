@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header class="site-header">
-    <div class="container">
+    <div class="container header-inner">
       <div class="brand">
         <div class="avatar" aria-hidden="true">WB</div>
         <div>
           <h1>Wassim Ben Younes</h1>
-          <p class="subtitle">Étudiant — Infrastructure informatique & cybersécurité (AEC)</p>
+          <p>Étudiant — Infrastructure informatique & cybersécurité (AEC)</p>
         </div>
       </div>
 
@@ -22,121 +23,185 @@
         <a href="#competences">Compétences</a>
         <a href="#projets">Projets</a>
         <a href="#formation">Formation</a>
-        <a href="#contact" class="btn">Contact</a>
+        <a href="#contact" class="nav-cta">Contact</a>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <div class="container grid-2">
-        <div>
+        <div class="hero-left">
           <h2>Administration systèmes, réseaux et sécurité — orienté lab entreprise</h2>
           <p class="lead">
-            Je construis et sécurise des environnements Windows/Linux : Active Directory, DNS/DHCP, pare-feu,
-            VPN, supervision et journalisation. Je développe aussi des outils Python (PyQt5/Flask) pour automatiser
-            et centraliser des tâches d’administration.
+            Je construis, sécurise et documente des environnements Windows/Linux : Active Directory, DNS/DHCP,
+            pare-feu, VPN, supervision et journalisation. Je développe aussi des outils Python (PyQt5/Flask)
+            pour automatiser et centraliser des tâches d’administration.
           </p>
 
           <div class="hero-actions">
-            <a class="btn" href="#projets">Voir mes projets</a>
-            <a class="btn-outline" href="#contact">Me contacter</a>
+            <a class="btn" href="#projets">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13 5l7 7-7 7v-4H4v-6h9V5z"/></svg>
+              Voir mes projets
+            </a>
+            <a class="btn-outline" href="#contact">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              Me contacter
+            </a>
           </div>
 
           <ul class="quick-facts">
-            <li><strong>Disponibilité :</strong> stage temps plein (35h/sem.)</li>
+            <li><strong>Disponibilité :</strong> stage temps plein (35h/sem.) — été 2026</li>
             <li><strong>Localisation :</strong> Québec (Montréal)</li>
-            <li><strong>Domaines :</strong> SysAdmin • Réseaux • Sécurité • Supervision</li>
+            <li><strong>Domaines :</strong> SysAdmin • Réseaux • Sécurité • Supervision • Automatisation</li>
           </ul>
         </div>
 
-        <div class="card">
+        <aside class="card hero-right">
           <h3>Compétences clés</h3>
           <div class="chips">
-            <span>Windows Server 2022</span>
+            <span>Windows Server</span>
             <span>Active Directory</span>
             <span>DNS / DHCP</span>
             <span>Linux (Debian)</span>
             <span>nftables / iptables</span>
-            <span>VPN (IPsec)</span>
+            <span>VPN (IPsec/OpenVPN)</span>
             <span>Zabbix</span>
             <span>Stork / Kea</span>
+            <span>BIND9</span>
             <span>Python (PyQt5/Flask)</span>
             <span>PostgreSQL / MySQL</span>
+            <span>Virtualisation (VMware/VirtualBox)</span>
           </div>
 
           <div class="divider"></div>
 
           <h3>Liens</h3>
           <ul class="links">
-            <li><a href="https://www.linkedin.com/in/wassim-benyounes-71482834b/" target="_blank" rel="noreferrer"> linkedIn </a></li>
-            <li><a href="https://github.com/wassim-18" target="_blank" rel="noreferrer"> github</a></li>
-            <li><a href="cv_wassim.pdf" target="_blank" rel="noreferrer"> CV </a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/wassim-benyounes-71482834b/" target="_blank" rel="noreferrer">
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/wassim-18" target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a href="cv_wassim.pdf" target="_blank" rel="noreferrer">
+                CV (PDF)
+              </a>
+            </li>
           </ul>
-        </div>
+        </aside>
       </div>
     </section>
 
+    <!-- COMPETENCES -->
     <section id="competences" class="section">
       <div class="container">
-        <h2>Compétences</h2>
-        <div class="grid-3">
-          <div class="card">
-            <h3>Systèmes</h3>
-            <ul>
-              <li>Windows Server : AD DS, GPO, DNS, DHCP, WSUS</li>
-              <li>Linux : déploiement, durcissement, services réseau</li>
-              <li>Gestion des services : systemd, journaux (journald)</li>
+        <div class="section-head">
+          <h2>Compétences</h2>
+          <p class="muted">Synthèse structurée de mes compétences techniques (Windows, Linux, sécurité, virtualisation, outils).</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="card skill-block">
+            <h3>Administration systèmes & serveurs</h3>
+            <ul class="skill-list">
+              <li>Windows Server 2022 : AD DS, DNS, DHCP, GPO, WSUS, gestion utilisateurs/groupes/OU</li>
+              <li>Microsoft 365 / Entra ID (notions) : IAM, RBAC, MFA, intégration hybride (en cours)</li>
+              <li>Exchange Online (bases) : boîtes, groupes, flux de messagerie (en cours)</li>
+              <li>Intune (notions) : gestion appareils/utilisateurs, conformité (en cours)</li>
             </ul>
-          </div>
-          <div class="card">
-            <h3>Réseaux</h3>
-            <ul>
-              <li>VLAN, routage, NAT/PAT, ACL</li>
-              <li>Diagnostic : ping/traceroute, ss/netstat, tcpdump/wireshark</li>
-              <li>Lab & virtualisation : VirtualBox/VMware, GNS3, pfSense</li>
+          </article>
+
+          <article class="card skill-block">
+            <h3>Linux & services réseau</h3>
+            <ul class="skill-list">
+              <li>Debian/AlmaLinux : déploiement et sécurisation de services</li>
+              <li>DNS/DHCP : BIND9, Kea DHCP, supervision Stork</li>
+              <li>Web/Reverse-proxy : Apache/Nginx, TLS/Let’s Encrypt (selon lab)</li>
+              <li>Messagerie (selon lab) : Postfix/Dovecot, journaux et tests envoi/réception</li>
             </ul>
-          </div>
-          <div class="card">
-            <h3>Sécurité & supervision</h3>
-            <ul>
-              <li>Pare-feu : nftables/iptables, Fail2Ban</li>
-              <li>Supervision : Zabbix (agents, triggers, dashboards)</li>
-              <li>Outils : Stork, Kea DHCP, BIND9</li>
+          </article>
+
+          <article class="card skill-block">
+            <h3>Durcissement & sécurité opérationnelle</h3>
+            <ul class="skill-list">
+              <li>SSH sécurisé, gestion clés, durcissement de base</li>
+              <li>Pare-feu : nftables / iptables, politiques restrictives</li>
+              <li>Fail2Ban, audit et journalisation (journald/syslog)</li>
+              <li>Supervision & alerting : Zabbix (items/triggers/actions)</li>
             </ul>
-          </div>
+          </article>
+
+          <article class="card skill-block">
+            <h3>Réseaux & virtualisation</h3>
+            <ul class="skill-list">
+              <li>Réseaux : VLAN, NAT/PAT, ACL, routage, VPN (selon labs)</li>
+              <li>Outils : Wireshark, nmap (selon labs)</li>
+              <li>Virtualisation : VirtualBox, VMware, Hyper-V (selon environnement)</li>
+              <li>Simulation : GNS3 / Packet Tracer (selon labs)</li>
+            </ul>
+          </article>
+
+          <article class="card skill-block">
+            <h3>Développement & automatisation</h3>
+            <ul class="skill-list">
+              <li>Python : PyQt5 (desktop), Flask (web), scripts d’automatisation</li>
+              <li>Gestion de rôles, journalisation, exports (selon projets)</li>
+              <li>Bases de données : PostgreSQL, MySQL, SQLite</li>
+              <li>Déploiement (selon projet) : Gunicorn, services systemd</li>
+            </ul>
+          </article>
+
+          <article class="card skill-block">
+            <h3>Documentation & méthode</h3>
+            <ul class="skill-list">
+              <li>Cahiers d’installation / administration reproductibles</li>
+              <li>Procédures, captures, preuves (logs, configs, schémas)</li>
+              <li>Approche troubleshooting : diagnostic, hypothèses, validation</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- PROJETS -->
     <section id="projets" class="section alt">
       <div class="container">
-        <h2>Projets</h2>
-        <p class="muted">
-          Une sélection de projets académiques et personnels. Chaque projet est orienté “réel” :
-          objectifs, technos, résultats, preuves (captures/commandes) si besoin.
-        </p>
+        <div class="section-head">
+          <h2>Projets</h2>
+          <p class="muted">Chaque carte pointe vers un dépôt GitHub (remplace les liens par tes URLs).</p>
+        </div>
 
-        <div class="grid-2">
+        <div class="projects-grid">
+          <!-- 1 -->
           <article class="card project">
             <div class="project-head">
               <h3>Mini SOC — Supervision pare-feu & serveurs (Zabbix)</h3>
               <span class="tag">Supervision</span>
             </div>
             <p>
-              Mise en place d’un environnement de supervision : collecte métriques, triggers, alertes,
-              supervision services, analyse journaux système.
+              Environnement de supervision : collecte métriques, triggers, alertes, disponibilité services et analyse journaux.
             </p>
             <ul class="project-list">
               <li>Création d’items (system.run), triggers et actions</li>
               <li>Surveillance firewall, disponibilité services, latence réseau</li>
-              <li>Tableaux de bord et preuves (logs/captures)</li>
+              <li>Tableaux de bord + preuves (logs/captures)</li>
             </ul>
             <div class="project-tech">
               <span>Zabbix</span><span>Linux</span><span>Logs</span><span>Firewall</span>
             </div>
+            <div class="project-actions">
+              <a class="btn-sm" href="#" target="_blank" rel="noreferrer">GitHub du projet</a>
+            </div>
           </article>
 
+          <!-- 2 -->
           <article class="card project">
             <div class="project-head">
               <h3>Debian 12 durci — services & sécurité</h3>
@@ -147,106 +212,183 @@
             </p>
             <ul class="project-list">
               <li>SSH sécurisé, règles nftables, Fail2Ban</li>
-              <li>Services : DNS/DHCP (BIND9 / Kea) et supervision Stork</li>
-              <li>Procédures reproductibles (cahier d’installation)</li>
+              <li>DNS/DHCP : BIND9 / Kea + supervision Stork</li>
+              <li>Cahier d’installation reproductible</li>
             </ul>
             <div class="project-tech">
               <span>Debian</span><span>nftables</span><span>Fail2Ban</span><span>BIND9</span><span>Kea</span><span>Stork</span>
             </div>
+            <div class="project-actions">
+              <a class="btn-sm" href="#" target="_blank" rel="noreferrer">GitHub du projet</a>
+            </div>
           </article>
 
+          <!-- 3 -->
           <article class="card project">
             <div class="project-head">
               <h3>Infrastructure Windows — AD, DNS, DHCP, GPO</h3>
               <span class="tag">Windows Server</span>
             </div>
             <p>
-              Conception d’une infra type entreprise : domaine, OUs, comptes, politiques, et services réseau.
+              Conception d’une infra type entreprise : domaine, OUs, comptes, politiques, services réseau, durcissement.
             </p>
             <ul class="project-list">
               <li>AD DS : OU, groupes, RBAC, politiques mots de passe</li>
               <li>DNS/DHCP : étendues, réservations, options</li>
-              <li>GPO : durcissement, paramètres utilisateurs/ordinateurs</li>
+              <li>GPO : paramètres utilisateurs/ordinateurs, durcissement</li>
             </ul>
             <div class="project-tech">
-              <span>Windows Server 2022</span><span>AD DS</span><span>DNS</span><span>DHCP</span><span>GPO</span>
+              <span>Windows Server</span><span>AD DS</span><span>DNS</span><span>DHCP</span><span>GPO</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn-sm" href="#" target="_blank" rel="noreferrer">GitHub du projet</a>
             </div>
           </article>
 
+          <!-- 4 -->
           <article class="card project">
             <div class="project-head">
               <h3>SecureAdmin — Application Python (gestion & logs)</h3>
               <span class="tag">Développement</span>
             </div>
             <p>
-              Application desktop pour centraliser la gestion des utilisateurs, rôles et journalisation, avec base de données.
+              Application desktop pour centraliser gestion utilisateurs, rôles, journalisation et exports, avec base de données.
             </p>
             <ul class="project-list">
               <li>Authentification, hachage mots de passe, RBAC</li>
               <li>Gestion utilisateurs, historiques, exports</li>
-              <li>Base PostgreSQL (et version SQLite)</li>
+              <li>PostgreSQL (et version SQLite)</li>
             </ul>
             <div class="project-tech">
               <span>Python</span><span>PyQt5</span><span>PostgreSQL</span><span>RBAC</span><span>Logs</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn-sm" href="#" target="_blank" rel="noreferrer">GitHub du projet</a>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="card project">
+            <div class="project-head">
+              <h3>Intranet scolaire — Envoi d’emails automatisés (Flask)</h3>
+              <span class="tag">Web</span>
+            </div>
+            <p>
+              Application intranet pour communication école-parents : interface web enseignants, personnalisation, envoi mail.
+            </p>
+            <ul class="project-list">
+              <li>Flask + templates : rédaction, prévisualisation, envoi</li>
+              <li>SMTP/Postfix (selon déploiement) + journaux de preuve</li>
+              <li>Déploiement Linux (ex : Gunicorn/systemd, reverse-proxy)</li>
+            </ul>
+            <div class="project-tech">
+              <span>Python</span><span>Flask</span><span>Linux</span><span>Postfix</span><span>Logs</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn-sm" href="#" target="_blank" rel="noreferrer">GitHub du projet</a>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="card project">
+            <div class="project-head">
+              <h3>VPN & sécurité réseau — Labs (site-to-site / road-warrior)</h3>
+              <span class="tag">Réseau</span>
+            </div>
+            <p>
+              Mise en place de VPN, règles de filtrage, validation par tests (ping/ports), et documentation.
+            </p>
+            <ul class="project-list">
+              <li>VPN (IPsec / OpenVPN selon lab)</li>
+              <li>ACL/pare-feu, NAT, routage</li>
+              <li>Captures Wireshark + preuves</li>
+            </ul>
+            <div class="project-tech">
+              <span>IPsec</span><span>OpenVPN</span><span>nftables</span><span>Wireshark</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn-sm" href="#" target="_blank" rel="noreferrer">GitHub du projet</a>
             </div>
           </article>
         </div>
 
         <p class="note">
-          Conseil : ajoute 2–3 preuves par projet (capture d’écran, extrait de config, schéma réseau) dans un dépôt GitHub par projet.
+          Conseil : ajoute pour chaque projet 2–3 preuves (captures Zabbix, configs nftables, schémas réseau, extraits logs).
         </p>
       </div>
     </section>
 
+    <!-- FORMATION -->
     <section id="formation" class="section">
       <div class="container">
-        <h2>Formation</h2>
+        <div class="section-head">
+          <h2>Formation</h2>
+        </div>
+
         <div class="grid-2">
-          <div class="card">
+          <article class="card">
             <h3>AEC — Infrastructure informatique & cybersécurité</h3>
             <p class="muted">Collège de Bois-de-Boulogne — Québec</p>
-            <ul>
-              <li>Réseaux (VLAN, NAT, ACL, OSPF, VPN)</li>
+            <ul class="simple-list">
+              <li>Réseaux (VLAN, NAT, ACL, VPN)</li>
               <li>Administration Windows & Linux</li>
               <li>Durcissement, supervision, documentation</li>
             </ul>
-          </div>
-          <div class="card">
+          </article>
+
+          <article class="card">
             <h3>Objectif de stage</h3>
-            <ul>
+            <ul class="simple-list">
               <li>Exploitation / administration (N1/N2)</li>
               <li>Sécurité opérationnelle (SOC junior) / supervision</li>
               <li>Automatisation (scripts, monitoring, hardening)</li>
             </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>
 
+    <!-- CONTACT -->
     <section id="contact" class="section alt">
       <div class="container">
-        <h2>Contact</h2>
-        <div class="card">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="muted">Réponse rapide par email.</p>
+        </div>
+
+        <div class="card contact-card">
           <p>
-            Pour me joindre, écris-moi à :
-            <a href="mailto:wassim.benyounes.cv@gmail.com">wassim.benyounes.cv@gmail.com</a>
+            Email :
+            <a class="mailto" href="mailto:wassim.benyounes.cv@gmail.com">wassim.benyounes.cv@gmail.com</a>
           </p>
-          <p class="muted">
-            
-          </p>
+
+          <div class="contact-actions">
+            <a class="btn" href="mailto:wassim.benyounes.cv@gmail.com?subject=Contact%20Portfolio%20Wassim%20Ben%20Younes">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              Envoyer un email
+            </a>
+            <a class="btn-outline" href="https://github.com/wassim-18" target="_blank" rel="noreferrer">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.77.6-3.35-1.17-3.35-1.17-.45-1.15-1.1-1.45-1.1-1.45-.9-.62.07-.61.07-.61 1 .07 1.52 1.03 1.52 1.03.89 1.52 2.33 1.08 2.9.83.09-.64.35-1.08.63-1.33-2.21-.25-4.54-1.11-4.54-4.94 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.6 9.6 0 0 1 12 6.8c.85 0 1.71.11 2.51.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+              Mon GitHub
+            </a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-inner">
       <p>© <span id="year"></span> Wassim Ben Younes — Portfolio</p>
+      <p class="muted tiny">Dernière mise à jour : <span id="today"></span></p>
     </div>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    const d = new Date();
+    const pad = (n)=> String(n).padStart(2,"0");
+    document.getElementById("today").textContent = `${pad(d.getDate())}/${pad(d.getMonth()+1)}/${d.getFullYear()}`;
   </script>
 </body>
 </html>
